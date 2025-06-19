@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="icon" href="./images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <h3>TIC TAC TOE</h3>
+        <div id="celebration-overlay">
+            <img src="./images/congratulations.gif" alt="Celebration" />
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="container-head">
+                <div class="logo">OX</div>
+                <div class="turn">O - TURN</div>
+                <button class="reset"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+            </div>
+
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <div class="line"></div>
+            </div>
+
+            <div class="scoreboard">
+                <div class="score player1">
+                    <p class="label">Player - O</p>
+                    <p class="value">0</p>
+                </div>
+                <div class="score ties">
+                    <p class="label">TIES</p>
+                    <p class="value">0</p>
+                </div>
+                <div class="score player2">
+                    <p class="label">Player - X</p>
+                    <p class="value">0</p>
+                </div>
+            </div>
+
+        </div>
+        <audio src="./images/celebration.wav" id="music"></audio>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
