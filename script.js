@@ -103,7 +103,20 @@ const disableBoxes = () => {
     }
 };
 
-const winTransforms = [
+
+if (window.innerWidth < 550) {
+  winTransforms = [
+    "translate(-50%, -27vmin) rotate(0deg)", // [0, 1, 2] – Top row
+    "translate(-88%, -50%) rotate(90deg)",  // [0, 3, 6] – Left column
+    "translate(-50%, -50%) rotate(45deg)",  // [0, 4, 8] – Diagonal \
+    "translate(-50%, -50%) rotate(90deg)",  // [1, 4, 7] – Middle column
+    "translate(-12%, -50%) rotate(90deg)",  // [2, 5, 8] – Right column
+    "translate(-50%, -50%) rotate(-45deg)", // [2, 4, 6] – Diagonal /
+    "translate(-50%, -50%) rotate(0deg)",   // [3, 4, 5] – Middle row
+    "translate(-50%, 26vmin) rotate(0deg)",  // [6, 7, 8] – Bottom row
+  ];
+} else {
+  winTransforms = [
     "translate(-50%, -3300%) rotate(0deg)", // [0, 1, 2] – Top row
     "translate(-88%, -50%) rotate(90deg)",  // [0, 3, 6] – Left column
     "translate(-50%, -50%) rotate(45deg)",  // [0, 4, 8] – Diagonal \
@@ -111,8 +124,10 @@ const winTransforms = [
     "translate(-12%, -50%) rotate(90deg)",  // [2, 5, 8] – Right column
     "translate(-50%, -50%) rotate(-45deg)", // [2, 4, 6] – Diagonal /
     "translate(-50%, -50%) rotate(0deg)",   // [3, 4, 5] – Middle row
-    "translate(-50%, 3300%) rotate(0deg)",  // [6, 7, 8] – Bottom row
-];
+    "translate(-50%, 16vmin) rotate(0deg)",  // [6, 7, 8] – Bottom row
+  ];
+}
+
 
 const drawWinLine = (patternIndex) => {
     line.style.transform = `${winTransforms[patternIndex]} scaleX(1)`;
